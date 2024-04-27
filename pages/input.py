@@ -2,7 +2,8 @@ import streamlit as st
 import pickle
 import datetime
 
-date = datetime.datetime.now()
+DIFF_JST_FROM_UTC = 9
+date = datetime.datetime.utcnow() + datetime.timedelta(hours=DIFF_JST_FROM_UTC)
 
 with st.form(key="1_form"):
     
@@ -11,8 +12,11 @@ with st.form(key="1_form"):
     st.subheader('1号')
     #テキストボックス
     tank1A= st.text_input('1-A')
+    a1= st.checkbox("1-A")
     tank1B= st.text_input('1-B')
+    b1= st.checkbox("1")
     tank1C= st.text_input('1-C')
+    c1= st.checkbox("2")
      
     st.subheader('2号')
     #テキストボックス
@@ -65,7 +69,6 @@ if submit_btn:
     f = open('list.txt','wb')
     
     list0 = []
-    list0.append(date.year)
     list0.append(date.month)
     list0.append(date.day)
     list0.append(date.hour)
