@@ -28,6 +28,13 @@ list8 = pickle.load(f)
 consumption_list = pickle.load(f)
 hour_later_list =pickle.load(f)
 
+
+
+
+
+
+
+
 v1a = pickle.load(f)
 v1b = pickle.load(f)
 v1c = pickle.load(f)
@@ -70,7 +77,7 @@ progress = ((ut_now - start)/3600 )
 #消費量
 consumption = consumption_rate * (progress+hour_later)
 
-
+print(hour_later)
 entY = list0[0]
 entm = list0[1]
 entd = list0[2]
@@ -79,19 +86,6 @@ entM = list0[4]
 
 
 
-
-
-
-
-if hour_later >=20 :
-    list1[0,0,0]
-    list2[0,0,0]
-    list3[0,0,0]
-    list4[0,0,0]
-    list5[0,0,0]
-    list6[0,0,0]
-    list7[0,0,0]
-    list8[0,0,0]
 
 #######
 if any(v1a):
@@ -225,93 +219,98 @@ lv8c = round(lv8c,2)
 ######
 
 #表示
-col1, col2 = st.columns([2,5])
-with col1:
-    st.subheader(f"{list0[0]}/{list0[1]}/{list0[2]}")
-    st.subheader(f"{list0[3]}:{list0[4]} 登録")
 
-    st.subheader('---1号---')
-    st.subheader(f"A : {list1[0]}{v1a[0]}")
-    st.subheader(f"B : {list1[1]}{v1b[0]}")
-    st.subheader(f"C : {list1[2]}{v1c[0]}")
-
-    st.subheader('---2号---')
-    st.subheader(f"A : {list2[0]}{v2a[0]}")
-    st.subheader(f"B : {list2[1]}{v2b[0]}")
-    st.subheader(f"C : {list2[2]}{v2c[0]}")
-
-    st.subheader('---3号---')
-    st.subheader(f"A : {list3[0]}{v3a[0]}")
-    st.subheader(f"B : {list3[1]}{v3b[0]}")
-    st.subheader(f"C : {list3[2]}{v3c[0]}")
-
-    st.subheader('---4号---')
-    st.subheader(f"A : {list4[0]}{v4a[0]}")
-    st.subheader(f"B : {list4[1]}{v4b[0]}")
-    st.subheader(f"C : {list4[2]}{v4c[0]}")
-
-    st.subheader('---5号---')
-    st.subheader(f"A : {list5[0]}{v5a[0]}")
-    st.subheader(f"B : {list5[1]}{v5b[0]}")
-    st.subheader(f"C : {list5[2]}{v5c[0]}")
-
-    st.subheader('---6号---')
-    st.subheader(f"A : {list6[0]}{v6a[0]}")
-    st.subheader(f"B : {list6[1]}{v6b[0]}")
-    st.subheader(f"C : {list6[2]}{v6c[0]}")
-
-    st.subheader('---7号---')
-    st.subheader(f"A : {list7[0]}{v7a[0]}")
-    st.subheader(f"B : {list7[1]}{v7b[0]}")
-    st.subheader(f"C : {list7[2]}{v7c[0]}")
-
-    st.subheader('---8号---')
-    st.subheader(f"A : {list8[0]}{v8a[0]}")
-    st.subheader(f"B : {list8[1]}{v8b[0]}")
-    st.subheader(f"C : {list8[2]}{v8c[0]}")
-    st.subheader("======")
+if hour_later >=20 :
+    st.subheader(f"本日未登録")
     
-with col2:
-    st.text(f"消費量{consumption_rate}/hで")
-    if hour_later == 0:
-        st.text(f"現在時刻 {later_.strftime('%H:%M')} の")
-        st.text(f"予測値")
-    else:
-        st.text(f"今から{hour_later}時間後")
-        st.text(f"{later_.strftime('%H:%M')}の予測値")
+else:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader(f"{list0[0]}/{list0[1]}/{list0[2]}")
+        st.subheader(f"{list0[3]}:{list0[4]} 登録")
 
-    st.subheader('-1号予測-')
-    st.subheader(f"A : {lv1a}")
-    st.subheader(f"B : {lv1b}")
-    st.subheader(f"C : {lv1c}")
-    st.subheader('-2号予測-')
-    st.subheader(f"A : {lv2a}")
-    st.subheader(f"B : {lv2b}")
-    st.subheader(f"C : {lv2c}")
-    st.subheader('-3号予測-')
-    st.subheader(f"A : {lv3a}")
-    st.subheader(f"B : {lv3b}")
-    st.subheader(f"C : {lv3c}")
-    st.subheader('-4号予測-')
-    st.subheader(f"A : {lv4a}")
-    st.subheader(f"B : {lv4b}")
-    st.subheader(f"C : {lv4c}")
-    st.subheader('-5号予測-')
-    st.subheader(f"A : {lv5a}")
-    st.subheader(f"B : {lv5b}")
-    st.subheader(f"C : {lv5c}")
-    st.subheader('---6号予測-')
-    st.subheader(f"A : {lv6a}")
-    st.subheader(f"B : {lv6b}")
-    st.subheader(f"C : {lv6c}")
-    st.subheader('-7号予測-')
-    st.subheader(f"A : {lv7a}")
-    st.subheader(f"B : {lv7b}")
-    st.subheader(f"C : {lv7c}")
-    st.subheader('-8号予測-')
-    st.subheader(f"A : {lv8a}")
-    st.subheader(f"B : {lv8b}")
-    st.subheader(f"C : {lv8c}")
+        st.subheader('---1号---')
+        st.subheader(f"A : {list1[0]}{v1a[0]}")
+        st.subheader(f"B : {list1[1]}{v1b[0]}")
+        st.subheader(f"C : {list1[2]}{v1c[0]}")
+
+        st.subheader('---2号---')
+        st.subheader(f"A : {list2[0]}{v2a[0]}")
+        st.subheader(f"B : {list2[1]}{v2b[0]}")
+        st.subheader(f"C : {list2[2]}{v2c[0]}")
+
+        st.subheader('---3号---')
+        st.subheader(f"A : {list3[0]}{v3a[0]}")
+        st.subheader(f"B : {list3[1]}{v3b[0]}")
+        st.subheader(f"C : {list3[2]}{v3c[0]}")
+
+        st.subheader('---4号---')
+        st.subheader(f"A : {list4[0]}{v4a[0]}")
+        st.subheader(f"B : {list4[1]}{v4b[0]}")
+        st.subheader(f"C : {list4[2]}{v4c[0]}")
+
+        st.subheader('---5号---')
+        st.subheader(f"A : {list5[0]}{v5a[0]}")
+        st.subheader(f"B : {list5[1]}{v5b[0]}")
+        st.subheader(f"C : {list5[2]}{v5c[0]}")
+
+        st.subheader('---6号---')
+        st.subheader(f"A : {list6[0]}{v6a[0]}")
+        st.subheader(f"B : {list6[1]}{v6b[0]}")
+        st.subheader(f"C : {list6[2]}{v6c[0]}")
+
+        st.subheader('---7号---')
+        st.subheader(f"A : {list7[0]}{v7a[0]}")
+        st.subheader(f"B : {list7[1]}{v7b[0]}")
+        st.subheader(f"C : {list7[2]}{v7c[0]}")
+
+        st.subheader('---8号---')
+        st.subheader(f"A : {list8[0]}{v8a[0]}")
+        st.subheader(f"B : {list8[1]}{v8b[0]}")
+        st.subheader(f"C : {list8[2]}{v8c[0]}")
+        st.subheader("======")
+        
+    with col2:
+        st.text(f"消費量{consumption_rate}/hで")
+        if hour_later == 0:
+            st.text(f"現在時刻 {later_.strftime('%H:%M')} の")
+            st.text(f"予測値")
+        else:
+            st.text(f"今から{hour_later}時間後")
+            st.text(f"{later_.strftime('%H:%M')}の予測値")
+
+        st.subheader('-1号予測-')
+        st.subheader(f"予測A : {lv1a}")
+        st.subheader(f"予測B : {lv1b}")
+        st.subheader(f"予測C : {lv1c}")
+        st.subheader('-2号予測-')
+        st.subheader(f"予測A : {lv2a}")
+        st.subheader(f"予測B : {lv2b}")
+        st.subheader(f"予測C : {lv2c}")
+        st.subheader('-3号予測-')
+        st.subheader(f"予測A : {lv3a}")
+        st.subheader(f"予測B : {lv3b}")
+        st.subheader(f"予測C : {lv3c}")
+        st.subheader('-4号予測-')
+        st.subheader(f"予測A : {lv4a}")
+        st.subheader(f"予測B : {lv4b}")
+        st.subheader(f"予測C : {lv4c}")
+        st.subheader('-5号予測-')
+        st.subheader(f"予測A : {lv5a}")
+        st.subheader(f"予測B : {lv5b}")
+        st.subheader(f"予測C : {lv5c}")
+        st.subheader('---6号予測-')
+        st.subheader(f"予測A : {lv6a}")
+        st.subheader(f"予測B : {lv6b}")
+        st.subheader(f"予測C : {lv6c}")
+        st.subheader('-7号予測-')
+        st.subheader(f"予測A : {lv7a}")
+        st.subheader(f"予測B : {lv7b}")
+        st.subheader(f"予測C : {lv7c}")
+        st.subheader('-8号予測-')
+        st.subheader(f"予測A : {lv8a}")
+        st.subheader(f"予測B : {lv8b}")
+        st.subheader(f"予測C : {lv8c}")
 
 
 
