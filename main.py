@@ -225,99 +225,99 @@ if st.session_state["authentication_status"]:
         if a1:
             v1a.append('　←開')
         else:
-            v1a.append('')
+            v1a.append('　　　 ')
         if b1:
             v1b.append('　←開')
         else:
-            v1b.append('')
+            v1b.append('　　　 ')
         if c1:
             v1c.append('　←開')
         else:
-            v1c.append('')   
+            v1c.append('　　　 ')   
         if a2:
             v2a.append('　←開')
         else:
-            v2a.append('')
+            v2a.append('　　　 ')
         if b2:
             v2b.append('　←開')
         else:
-            v2b.append('')
+            v2b.append('　　　 ')
         if c2:
             v2c.append('　←開')
         else:
-            v2c.append('')  
+            v2c.append('　　　 ')  
         if a3:
             v3a.append('　←開')
         else:
-            v3a.append('')
+            v3a.append('　　　 ')
         if b3:
             v3b.append('　←開')
         else:
-            v3b.append('')
+            v3b.append('　　　 ')
         if c3:
             v3c.append('　←開')
         else:
-            v3c.append('')         
+            v3c.append('　　　 ')         
         if a4:
             v4a.append('　←開')
         else:
-            v4a.append('')
+            v4a.append('　　　 ')
         if b4:
             v4b.append('　←開')
         else:
-            v4b.append('')
+            v4b.append('　　　 ')
         if c4:
             v4c.append('　←開')
         else:
-            v4c.append('')         
+            v4c.append('　　　 ')         
         if a5:
             v5a.append('　←開')
         else:
-            v5a.append('')
+            v5a.append('　　　 ')
         if b5:
             v5b.append('　←開')
         else:
-            v5b.append('')
+            v5b.append('　　　 ')
         if c5:
             v5c.append('　←開')
         else:
-            v5c.append('')         
+            v5c.append('　　　 ')         
         if a6:
             v6a.append('　←開')
         else:
-            v6a.append('')
+            v6a.append('　　　 ')
         if b6:
             v6b.append('　←開')
         else:
-            v6b.append('')
+            v6b.append('　　　 ')
         if c6:
             v6c.append('　←開')
         else:
-            v6c.append('')         
+            v6c.append('　　　 ')         
         if a7:
             v7a.append('　←開')
         else:
-            v7a.append('')
+            v7a.append('　　　 ')
         if b7:
             v7b.append('　←開')
         else:
-            v7b.append('')
+            v7b.append('　　　 ')
         if c7:
             v7c.append('　←開')
         else:
-            v7c.append('')         
+            v7c.append('　　　 ')         
         if a8:
             v8a.append('　←開')
         else:
-            v8a.append('')
+            v8a.append('　　　 ')
         if b8:
             v8b.append('　←開')
         else:
-            v8b.append('')
+            v8b.append('　　　 ')
         if c8:
             v8c.append('　←開')
         else:
-            v8c.append('')         
+            v8c.append('　　　 ')         
             
         pickle.dump(v1a,f)
         pickle.dump(v1b,f)
