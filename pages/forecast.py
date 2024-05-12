@@ -216,50 +216,55 @@ if hour_later >=20 :
 else:
     st.write(f"**:red[{list0[0]}/{list0[1]}/{list0[2]}　{list0[3]}:{list0[4]}登録]**")
     
+    if hour_later == 0:
+            st.write(f"予測条件は{consumption_rate}/hで現在({later_.strftime('%H:%M')})")      
+    else:
+            st.write(f"予測条件は{consumption_rate}/hで{hour_later}時間後（{later_.strftime('%H:%M')}）")
+      
     
     col1, = st.columns(1)
+    
     with col1:
-
-        st.write('---1号---')
-        st.write(f"A : {list1[0]}{v1a[0]}")
-        st.write(f"B : {list1[1]}{v1b[0]}")
-        st.write(f"C : {list1[2]}{v1c[0]}")
-
-        st.write('---2号---')
-        st.write(f"A : {list2[0]}{v2a[0]}")
-        st.write(f"B : {list2[1]}{v2b[0]}")
-        st.write(f"C : {list2[2]}{v2c[0]}")
-
-        st.write('---3号---')
-        st.write(f"A : {list3[0]}{v3a[0]}")
-        st.write(f"B : {list3[1]}{v3b[0]}")
-        st.write(f"C : {list3[2]}{v3c[0]}")
-
-        st.write('---4号---')
-        st.write(f"A : {list4[0]}{v4a[0]}")
-        st.write(f"B : {list4[1]}{v4b[0]}")
-        st.write(f"C : {list4[2]}{v4c[0]}")
-
-        st.write('---5号---')
-        st.write(f"A : {list5[0]}{v5a[0]}")
-        st.write(f"B : {list5[1]}{v5b[0]}")
-        st.write(f"C : {list5[2]}{v5c[0]}")
-
-        st.write('---6号---')
-        st.write(f"A : {list6[0]}{v6a[0]}")
-        st.write(f"B : {list6[1]}{v6b[0]}")
-        st.write(f"C : {list6[2]}{v6c[0]}")
-
-        st.write('---7号---')
-        st.write(f"A : {list7[0]}{v7a[0]}")
-        st.write(f"B : {list7[1]}{v7b[0]}")
-        st.write(f"C : {list7[2]}{v7c[0]}")
+        st.write('---1号予測')
+        st.write(f"**:red[A : {lv1a}{v1a[0]}]**")
+        st.write(f"**:red[B : {lv1b}{v1b[0]}]**")
+        st.write(f"**:red[C : {lv1c}{v1c[0]}]**")
         
-        st.write('---8号---')
-        st.write(f"A : {list8[0]}{v8a[0]}")
-        st.write(f"B : {list8[1]}{v8b[0]}")
-        st.write(f"C : {list8[2]}{v8c[0]}")
+        st.write('---2号予測')
+        st.write(f"**:red[A : {lv2a}{v2a[0]}]**")
+        st.write(f"**:red[B : {lv2b}{v2b[0]}]**")
+        st.write(f"**:red[C : {lv2c}{v2c[0]}]**") 
+        
+        st.write('---3号予測')
+        st.write(f"**:red[A : {lv3a}{v3a[0]}]**")
+        st.write(f"**:red[B : {lv3b}{v3b[0]}]**")
+        st.write(f"**:red[C : {lv3c}{v3c[0]}]**") 
+        
+        st.write('---4号予測')
+        st.write(f"**:red[A : {lv4a}{v4a[0]}]**")
+        st.write(f"**:red[B : {lv4b}{v4b[0]}]**")
+        st.write(f"**:red[C : {lv4c}{v4c[0]}]**") 
+        
+        st.write('---5号予測')
+        st.write(f"**:red[A : {lv5a}{v5a[0]}]**")
+        st.write(f"**:red[B : {lv5b}{v5b[0]}]**")
+        st.write(f"**:red[C : {lv5c}{v5c[0]}]**") 
+        
+        st.write('---6号予測')
+        st.write(f"**:red[A : {lv6a}{v6a[0]}]**")
+        st.write(f"**:red[B : {lv6b}{v6b[0]}]**")
+        st.write(f"**:red[C : {lv6c}{v6c[0]}]**") 
+        
+        st.write('---7号予測')
+        st.write(f"**:red[A : {lv7a}{v7a[0]}]**")
+        st.write(f"**:red[B : {lv7b}{v7b[0]}]**")
+        st.write(f"**:red[C : {lv7c}{v7c[0]}]**") 
+        
+        st.write('---8号予測')
+        st.write(f"**:red[A : {lv8a}{v8a[0]}]**")
+        st.write(f"**:red[B : {lv8b}{v8b[0]}]**")
+        st.write(f"**:red[C : {lv8c}{v8c[0]}]**")
         st.write(f"---------") 
-        st.write(f"※左上の>からforecastをタップで予測値がみれる") 
-        st.write(f"※登録日時は要確認です、前日の情報を見ているかも")       
-        st.write(f"※登録時刻から20時間経過すると自動で消去されます") 
+        st.write(f"※消費量は変更可能")
+        st.write(f"※ページを開いた時からX時間が経過した予測です")       
+        
