@@ -70,6 +70,8 @@ later_ = datetime.datetime.utcnow() + datetime.timedelta(hours=DIFF_JST_FROM_UTC
 progress = ((ut_now - start)/3600 )
 #消費量
 consumption = consumption_rate * (progress+hour_later)
+#20時間
+de = ut_now -start
 
 entY = list0[0]
 entm = list0[1]
@@ -210,7 +212,7 @@ lv8c = round(lv8c,2)
 
 #表示
 
-if hour_later >=20 :
+if de >= 72000 :
     st.subheader(f"本日未登録")
     
 else:
