@@ -79,7 +79,7 @@ entd = list0[2]
 entH = list0[3]
 entM = list0[4]
 
-#print(start)
+print(start)
 #print(ut_now)
 #print (de)
 
