@@ -67,11 +67,13 @@ hour_later = hour_later_list[0]
 #x時間後の日時
 later_ = datetime.datetime.utcnow() + datetime.timedelta(hours=DIFF_JST_FROM_UTC + hour_later_list[0])
 #経過時間
-progress = ((ut_now - start)/3600 )
+progress = (ut_now - start)/3600
 #消費量
-consumption = consumption_rate * (progress+hour_later)
+consumption = consumption_rate * (progress + hour_later)
 #20時間
 de = ut_now -start
+
+
 
 entY = list0[0]
 entm = list0[1]
@@ -216,7 +218,7 @@ if de >= 72000 :
     st.subheader(f"本日未登録")
     
 else:
-    st.write(f"**:red[{list0[0]}/{list0[1]}/{list0[2]}　{list0[3]}:{list0[4]}登録]**")
+    st.subheader(f"**:red[{list0[0]}/{list0[1]}/{list0[2]}　{list0[3]}:{list0[4]}登録]**")
     
     if hour_later == 0:
             st.write(f"予測条件は{consumption_rate}/hで現在({later_.strftime('%H:%M')})")      
@@ -227,46 +229,46 @@ else:
     col1, = st.columns(1)
     
     with col1:
-        st.write('---1号予測')
-        st.write(f"**:red[A : {lv1a}{v1a[0]}]**")
-        st.write(f"**:red[B : {lv1b}{v1b[0]}]**")
-        st.write(f"**:red[C : {lv1c}{v1c[0]}]**")
+        st.subheader('---1号予測')
+        st.subheader(f"**:red[A : {lv1a}{v1a[0]}]**")
+        st.subheader(f"**:red[B : {lv1b}{v1b[0]}]**")
+        st.subheader(f"**:red[C : {lv1c}{v1c[0]}]**")
         
-        st.write('---2号予測')
-        st.write(f"**:red[A : {lv2a}{v2a[0]}]**")
-        st.write(f"**:red[B : {lv2b}{v2b[0]}]**")
-        st.write(f"**:red[C : {lv2c}{v2c[0]}]**") 
+        st.subheader('---2号予測')
+        st.subheader(f"**:red[A : {lv2a}{v2a[0]}]**")
+        st.subheader(f"**:red[B : {lv2b}{v2b[0]}]**")
+        st.subheader(f"**:red[C : {lv2c}{v2c[0]}]**") 
         
-        st.write('---3号予測')
-        st.write(f"**:red[A : {lv3a}{v3a[0]}]**")
-        st.write(f"**:red[B : {lv3b}{v3b[0]}]**")
-        st.write(f"**:red[C : {lv3c}{v3c[0]}]**") 
+        st.subheader('---3号予測')
+        st.subheader(f"**:red[A : {lv3a}{v3a[0]}]**")
+        st.subheader(f"**:red[B : {lv3b}{v3b[0]}]**")
+        st.subheader(f"**:red[C : {lv3c}{v3c[0]}]**") 
         
-        st.write('---4号予測')
-        st.write(f"**:red[A : {lv4a}{v4a[0]}]**")
-        st.write(f"**:red[B : {lv4b}{v4b[0]}]**")
-        st.write(f"**:red[C : {lv4c}{v4c[0]}]**") 
+        st.subheader('---4号予測')
+        st.subheader(f"**:red[A : {lv4a}{v4a[0]}]**")
+        st.subheader(f"**:red[B : {lv4b}{v4b[0]}]**")
+        st.subheader(f"**:red[C : {lv4c}{v4c[0]}]**") 
         
-        st.write('---5号予測')
-        st.write(f"**:red[A : {lv5a}{v5a[0]}]**")
-        st.write(f"**:red[B : {lv5b}{v5b[0]}]**")
-        st.write(f"**:red[C : {lv5c}{v5c[0]}]**") 
+        st.subheader('---5号予測')
+        st.subheader(f"**:red[A : {lv5a}{v5a[0]}]**")
+        st.subheader(f"**:red[B : {lv5b}{v5b[0]}]**")
+        st.subheader(f"**:red[C : {lv5c}{v5c[0]}]**") 
         
-        st.write('---6号予測')
-        st.write(f"**:red[A : {lv6a}{v6a[0]}]**")
-        st.write(f"**:red[B : {lv6b}{v6b[0]}]**")
-        st.write(f"**:red[C : {lv6c}{v6c[0]}]**") 
+        st.subheader('---6号予測')
+        st.subheader(f"**:red[A : {lv6a}{v6a[0]}]**")
+        st.subheader(f"**:red[B : {lv6b}{v6b[0]}]**")
+        st.subheader(f"**:red[C : {lv6c}{v6c[0]}]**") 
         
-        st.write('---7号予測')
-        st.write(f"**:red[A : {lv7a}{v7a[0]}]**")
-        st.write(f"**:red[B : {lv7b}{v7b[0]}]**")
-        st.write(f"**:red[C : {lv7c}{v7c[0]}]**") 
+        st.subheader('---7号予測')
+        st.subheader(f"**:red[A : {lv7a}{v7a[0]}]**")
+        st.subheader(f"**:red[B : {lv7b}{v7b[0]}]**")
+        st.subheader(f"**:red[C : {lv7c}{v7c[0]}]**") 
         
-        st.write('---8号予測')
-        st.write(f"**:red[A : {lv8a}{v8a[0]}]**")
-        st.write(f"**:red[B : {lv8b}{v8b[0]}]**")
-        st.write(f"**:red[C : {lv8c}{v8c[0]}]**")
+        st.subheader('---8号予測')
+        st.subheader(f"**:red[A : {lv8a}{v8a[0]}]**")
+        st.subheader(f"**:red[B : {lv8b}{v8b[0]}]**")
+        st.subheader(f"**:red[C : {lv8c}{v8c[0]}]**")
         st.write(f"---------") 
-        st.write(f"※消費量は変更可能")
+        st.write(f"※消費量は登録時に変更可能")
         st.write(f"※ページを開いた時からX時間が経過した予測です")       
         

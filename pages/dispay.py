@@ -26,7 +26,7 @@ list7 = pickle.load(f)
 list8 = pickle.load(f)
 
 consumption_list = pickle.load(f)
-hour_later_list =pickle.load(f)
+hour_later_list = pickle.load(f)
 
 
 v1a = pickle.load(f)
@@ -78,9 +78,10 @@ entm = list0[1]
 entd = list0[2]
 entH = list0[3]
 entM = list0[4]
-print(start)
-print(ut_now)
-print (de)
+
+#print(start)
+#print(ut_now)
+#print (de)
 
 #######
 if '　←開' in v1a:
@@ -218,52 +219,51 @@ if de >= 72000 :
     st.subheader(f"本日未登録")
     
 else:
-    st.write(f"**:red[{list0[0]}/{list0[1]}/{list0[2]}　{list0[3]}:{list0[4]}登録]**")
-    
+    st.subheader(f"**:red[{list0[0]}/{list0[1]}/{list0[2]}　{list0[3]}:{list0[4]}登録]**")
     
     col1, = st.columns(1)
     with col1:
 
-        st.write('---1号---')
-        st.write(f"A : {list1[0]}{v1a[0]}")
-        st.write(f"B : {list1[1]}{v1b[0]}")
-        st.write(f"C : {list1[2]}{v1c[0]}")
+        st.subheader('---1号---')
+        st.subheader(f"A : {list1[0]}{v1a[0]}")
+        st.subheader(f"B : {list1[1]}{v1b[0]}")
+        st.subheader(f"C : {list1[2]}{v1c[0]}")
 
-        st.write('---2号---')
-        st.write(f"A : {list2[0]}{v2a[0]}")
-        st.write(f"B : {list2[1]}{v2b[0]}")
-        st.write(f"C : {list2[2]}{v2c[0]}")
+        st.subheader('---2号---')
+        st.subheader(f"A : {list2[0]}{v2a[0]}")
+        st.subheader(f"B : {list2[1]}{v2b[0]}")
+        st.subheader(f"C : {list2[2]}{v2c[0]}")
 
-        st.write('---3号---')
-        st.write(f"A : {list3[0]}{v3a[0]}")
-        st.write(f"B : {list3[1]}{v3b[0]}")
-        st.write(f"C : {list3[2]}{v3c[0]}")
+        st.subheader('---3号---')
+        st.subheader(f"A : {list3[0]}{v3a[0]}")
+        st.subheader(f"B : {list3[1]}{v3b[0]}")
+        st.subheader(f"C : {list3[2]}{v3c[0]}")
 
-        st.write('---4号---')
-        st.write(f"A : {list4[0]}{v4a[0]}")
-        st.write(f"B : {list4[1]}{v4b[0]}")
-        st.write(f"C : {list4[2]}{v4c[0]}")
+        st.subheader('---4号---')
+        st.subheader(f"A : {list4[0]}{v4a[0]}")
+        st.subheader(f"B : {list4[1]}{v4b[0]}")
+        st.subheader(f"C : {list4[2]}{v4c[0]}")
 
-        st.write('---5号---')
-        st.write(f"A : {list5[0]}{v5a[0]}")
-        st.write(f"B : {list5[1]}{v5b[0]}")
-        st.write(f"C : {list5[2]}{v5c[0]}")
+        st.subheader('---5号---')
+        st.subheader(f"A : {list5[0]}{v5a[0]}")
+        st.subheader(f"B : {list5[1]}{v5b[0]}")
+        st.subheader(f"C : {list5[2]}{v5c[0]}")
 
-        st.write('---6号---')
-        st.write(f"A : {list6[0]}{v6a[0]}")
-        st.write(f"B : {list6[1]}{v6b[0]}")
-        st.write(f"C : {list6[2]}{v6c[0]}")
+        st.subheader('---6号---')
+        st.subheader(f"A : {list6[0]}{v6a[0]}")
+        st.subheader(f"B : {list6[1]}{v6b[0]}")
+        st.subheader(f"C : {list6[2]}{v6c[0]}")
 
-        st.write('---7号---')
-        st.write(f"A : {list7[0]}{v7a[0]}")
-        st.write(f"B : {list7[1]}{v7b[0]}")
-        st.write(f"C : {list7[2]}{v7c[0]}")
+        st.subheader('---7号---')
+        st.subheader(f"A : {list7[0]}{v7a[0]}")
+        st.subheader(f"B : {list7[1]}{v7b[0]}")
+        st.subheader(f"C : {list7[2]}{v7c[0]}")
         
-        st.write('---8号---')
-        st.write(f"A : {list8[0]}{v8a[0]}")
-        st.write(f"B : {list8[1]}{v8b[0]}")
-        st.write(f"C : {list8[2]}{v8c[0]}")
+        st.subheader('---8号---')
+        st.subheader(f"A : {list8[0]}{v8a[0]}")
+        st.subheader(f"B : {list8[1]}{v8b[0]}")
+        st.subheader(f"C : {list8[2]}{v8c[0]}")
         st.write(f"---------") 
         st.write(f"※左上の>からforecastをタップで予測値がみれる") 
         st.write(f"※登録日時は要確認です、前日の情報を見ているかも")       
-        st.write(f"※登録時刻から20時間経過すると自動で消去されます") 
+        st.write(f"※登録時刻から20時間経過すると自動で消去されます")

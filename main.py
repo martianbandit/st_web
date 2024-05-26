@@ -48,7 +48,8 @@ if st.session_state["authentication_status"]:
         b1= st.checkbox("1b")
         tank1C= st.text_input(('1-C'),0)
         c1= st.checkbox("1c")
-                
+        st.write(f"---------")
+               
         st.subheader('2号')
         #テキストボックス
         tank2A= st.text_input(('2-A'),0)
@@ -57,6 +58,7 @@ if st.session_state["authentication_status"]:
         b2= st.checkbox("2b")
         tank2C= st.text_input(('2-C'),0)
         c2= st.checkbox("2c")
+        st.write(f"---------")
                 
         st.subheader('3号')
         #テキストボックス
@@ -66,7 +68,8 @@ if st.session_state["authentication_status"]:
         b3= st.checkbox("3b")
         tank3C= st.text_input(('3-C'),0)
         c3= st.checkbox("3c")
-
+        st.write(f"---------")
+        
         st.subheader('4号')
         #テキストボックス
         tank4A= st.text_input(('4-A'),0)
@@ -75,6 +78,7 @@ if st.session_state["authentication_status"]:
         b4= st.checkbox("4b")
         tank4C= st.text_input(('4-C'),0)
         c4= st.checkbox("4c")
+        st.write(f"---------")
                 
         st.subheader('5号')
         #テキストボックス
@@ -84,6 +88,7 @@ if st.session_state["authentication_status"]:
         b5= st.checkbox("5b")
         tank5C= st.text_input(('5-C'),0)
         c5= st.checkbox("5c")
+        st.write(f"---------")
                 
         st.subheader('6号')
         #テキストボックス
@@ -93,6 +98,7 @@ if st.session_state["authentication_status"]:
         b6= st.checkbox("6b")
         tank6C= st.text_input(('6-C'),0)
         c6= st.checkbox("6c")
+        st.write(f"---------")
                 
         st.subheader('7号')
         #テキストボックス
@@ -102,6 +108,7 @@ if st.session_state["authentication_status"]:
         b7= st.checkbox("7b")
         tank7C= st.text_input(('7-C'),0)       
         c7= st.checkbox("7c")
+        st.write(f"---------")
                 
         st.subheader('8号')
         #テキストボックス
@@ -111,14 +118,16 @@ if st.session_state["authentication_status"]:
         b8= st.checkbox("8b")
         tank8C= st.text_input(('8-C'),0)
         c8= st.checkbox("8c")
+        st.write(f"---------")
         
-        consumption_rate = st.number_input('【------消費率------】',0.8) 
+        consumption_rate = st.number_input('【------消費率------】') 
         hour_later = st.number_input('時間',0)
+
         
         submit_btn = st.form_submit_button("送信")
         cancel_btn = st.form_submit_button("キャンセル")
-
-
+        st.write(f"ver 1.1")
+        
 
     if submit_btn:
                 
@@ -181,6 +190,7 @@ if st.session_state["authentication_status"]:
         consumption_list.append(float(consumption_rate))
         hour_later_list = []
         hour_later_list.append(int(hour_later))  
+
                   
         #リストファイルを保存 
         pickle.dump(list0,f)   
