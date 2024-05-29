@@ -152,7 +152,7 @@ if '　←開' in v5a:
 else:
     lv5a = list5[0]
 lv5a = round(lv5a,2)   
-if '　←開' in v1b:
+if '　←開' in v5b:
     lv5b = (list5[1] - consumption)
 else:
     lv5b = list5[1]
